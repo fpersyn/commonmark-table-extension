@@ -25,7 +25,7 @@ class TableRenderer implements BlockRendererInterface
             throw new \InvalidArgumentException('Incompatible block type: '.get_class($block));
         }
 
-        $attrs = [];
+        $attrs = ["class" => "table"];
         foreach ($block->getData('attributes', []) as $key => $value) {
             $attrs[$key] = $htmlRenderer->escape($value, true);
         }
